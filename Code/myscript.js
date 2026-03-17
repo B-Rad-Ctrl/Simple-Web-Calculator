@@ -14,7 +14,12 @@ $(document).ready(function(){
     });
 
     $("#ans").click(function(){ // run's code in block upon clicking the "=" button
-        $("#screen").val(eval($("#screen").val()));  // calculates the value of the input "screen", passes the value back into "screen"
+        var answer = math.evaluate($("#screen").val())
+
+        $("#screen").val(answer)
+        /*
+        $("#screen").val(math.evaluate($("#screen").val()));  // calculates the value of the input "screen", passes the value back into "screen"
+        */
     });
 
     $("#clear").click(function(){ // run's code in block upon clicking the "C" (clear) button
