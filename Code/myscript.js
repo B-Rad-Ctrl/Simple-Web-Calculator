@@ -5,20 +5,20 @@
 */
 
 $(document).ready(function(){
-    $(".btns").click(function(){
-        var number = $(this).val();
+    $("#num-operators button").click(function(){ //run's code in block upon clicking any button with "btn btn-dark" class
+        var number = $(this).val(); // assigns the value of the clicked button to a variable as a string
 
-        var currentScreen = $("#screen").val();
+        var currentScreen = $("#screen").val(); // assigns the value of the input "screen" to a variable as a string
 
-        $("#screen").val(currentScreen + number);
+        $("#screen").val(currentScreen + number); // concatenates the two variable strings and updates the value of the input "screen" 
     });
 
-    $(".ans").click(function(){
-        $("#screen").val(eval($("#screen").val()));
+    $("#ans").click(function(){ // run's code in block upon clicking the "=" button
+        $("#screen").val(eval($("#screen").val()));  // calculates the value of the input "screen", passes the value back into "screen"
     });
 
-    $(".clear").click(function(){
-        $("#screen").val("");
+    $("#clear").click(function(){ // run's code in block upon clicking the "C" (clear) button
+        $("#screen").val(""); // sets the value of the input "screen" to an empty string, clearing "screen"
     });
 
 });

@@ -7,46 +7,69 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Project A - Simple Web Calculator - By Bradley McMillan</title>
-        <script type="text/javascript" src="jquery.js"></script>
+
+        <!-- I decided to use external JS and jQuery for this project instead of using a CDN --> 
+        <script type="text/javascript" src="jquery.js"></script> 
         <script type="text/javascript" src="myscript.js"></script>
 
+        <!-- For Bootstrap however, I decided to use the CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
 
-    <body>
-        <h1>Welcome to my calculator web application!</h1>
+    <body class="bg-dark">
+        <h1 class="bg-dark fw-bold text-white text-center py-3">Welcome to my calculator web application!</h1>
 
-        <input type="text" id="screen"></input><br>
-        
-    
-        <button class="btns" value="1">1</button>
-        <button class="btns" value="2">2</button>
-        <button class="btns" value="3">3</button><br>
+        <div class="container mt-5 p-4 rounded bg-light shadow-lg mx-auto" style="max-width: 400px;">
 
-        <button class="btns" value="4">4</button>
-        <button class="btns" value="5">5</button>
-        <button class="btns" value="6">6</button><br>
+            <div class="mb-3">
+                <input class="form-control bg-dark text-white text-center" type="text" id="screen"></input><br>
+            </div>
+            
+            <div class="text-center" id="num-operators">
+                <button class="btn btn-dark w-25 mb-1" value="1">1</button>
+                <button class="btn btn-dark w-25 mb-1" value="2">2</button>
+                <button class="btn btn-dark w-25 mb-1" value="3">3</button><br>
 
-        <button class="btns" value="7">7</button>
-        <button class="btns" value="8">8</button>
-        <button class="btns" value="9">9</button><br>
+                <button class="btn btn-dark w-25 mb-1" value="4">4</button>
+                <button class="btn btn-dark w-25 mb-1" value="5">5</button>
+                <button class="btn btn-dark w-25 mb-1" value="6">6</button><br>
 
-        <button class="btns" value="(">(</button>
-        <button class="btns" value="0">0</button>
-        <button class="btns" value=")">)</button><br>
-    
-        <button class="btns" value="+">+</button>
-        <button class="btns" value="-">-</button>
-        <button class="btns" value="*">x</button>
-        <button class="btns" value="/">÷</button>
-    
+                <button class="btn btn-dark w-25 mb-1" value="7">7</button>
+                <button class="btn btn-dark w-25 mb-1" value="8">8</button>
+                <button class="btn btn-dark w-25 mb-1" value="9">9</button><br>
 
-        <button class="ans" value="=">=</button> 
-        <button class="clear" value="c">C</button>
-    
+                <button class="btn btn-secondary w-25 mb-1" value="(">(</button>
+                <button class="btn btn-dark w-25 mb-1" value="0">0</button>
+                <button class="btn btn-secondary w-25 mb-1" value=")">)</button><br>
+            
+                <button class="btn btn-info w-25 mb-1" value="+">+</button>
+                <button class="btn btn-info w-25 mb-1" value="-">-</button>
+                <button class="btn btn-info w-25 mb-1" value="*">x</button>
+                <button class="btn btn-info w-25 mb-1" value="/">÷</button>
+            </div>
 
-        <footer>
+            <div class="text-center" id="clear-ans">
+                <button class="btn btn-danger w-25 mb-1" id="ans" value="=">=</button> 
+                <button class="btn btn-warning w-25 mb-1" id="clear" value="c">C</button>
+            </div>
+        </div>
+
+        <div> 
+            <p class="m-5 w-50 mx-auto text-white text-center">
+                This small project is nothing particularly special,
+                I just wanted to practice jQuery for my upcoming Client-side courswork.
+                This calculator is far from perfect, it's even missing the decimal functionality,
+                but it is not intended to be a perfect finished product. Feel free to make changes to the code, just make sure
+                to follow the license guidelines.
+                <br><br>
+                ps. I am aware of the security vulnerabilities of the eval method, for this project I was not concerned as this was never going to be a live
+                site, if you do decide to use this code, make sure to replace the eval logic with a more robust and secure calculation method.
+            </p>
+        </div>
+
+        <footer class="text-white m-5 text-center">
             <p>&copy; 2026 Bradley McMillan</p>
             <a href="https://github.com/B-Rad-Ctrl">Visit my Github profile?</a>
         </footer>
