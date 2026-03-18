@@ -23,5 +23,12 @@ $(document).ready(function(){
         $("#screen").val(""); // sets the value of the input "screen" to an empty string, clearing "screen"
     });
 
+    $("#inlogo").click(function(){
+        window.location.replace("https://linkedin.com/in/bradley-mcmillan-5967233b5");
+    });
+
+    $("#gitlogo").click(function(){
+        window.location.replace("https://github.com/B-Rad-Ctrl");
+    });
 });
 
