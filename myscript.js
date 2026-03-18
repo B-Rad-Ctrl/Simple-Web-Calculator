@@ -24,11 +24,11 @@ $(document).ready(function(){
     });
 
     $("#inlogo").click(function(){
-        window.location.replace("https://linkedin.com/in/bradley-mcmillan-5967233b5");
+        window.location.href = "https://linkedin.com/in/bradley-mcmillan-5967233b5";
     });
 
     $("#gitlogo").click(function(){
-        window.location.replace("https://github.com/B-Rad-Ctrl");
+        window.location.href = "https://github.com/B-Rad-Ctrl";
     });
 });
 
